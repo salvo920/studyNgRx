@@ -1,0 +1,9 @@
+Redux è un modo di implementare uno stato prevedibile del contenitore per le applicazioni javascript.
+Redux la libreria che è stata la prima implementazione del patter redux era basata su flux di facebook and nell'ultimo 
+paio di anni è diventato il patter gestore di stato per le SPA(single page application).
+
+IL pattern redux, su cui NgRx è basat, ha 3 principi fondamentali:
+1) C'e solo 1 singola fonte di verita dello stato della nostra applciazione chiamato store.
+2) Lo stao è di sola lettura, e l'unico modo per cambiare lo stato è quello di inviare un azione.
+3) Per cambiare lo stato bisogna usare funzioni pure chiamate reducer. 
+

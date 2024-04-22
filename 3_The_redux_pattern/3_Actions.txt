@@ -1,0 +1,7 @@
+Tutti gli eventi untente rilevanti invianoun azione.
+Colpendo i reducer che aggiornano lo store.
+Qualche esempio di azioni che potrebbero inviare per cambiare lo store sono, 
+un azione di login dopo che un form di login è stato mandato.
+Un azione di un menu laterale di commutazuine dopo il click di un bottone.
+
+fermo a 00:19 da Actions 

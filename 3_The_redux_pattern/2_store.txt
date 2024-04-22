@@ -1,0 +1,18 @@
+Lo store è letteralmente un oggetto javascript, questo tiene los tato dell'applicazione.
+Puoi pensare come un database lato client, costruito da servizi che mantengono lo stato dell'applicazione. 
+Seguendo il pattern redux, tutti gli  stati sono invece mantenuti nello store. 
+Questo diventa molto potente quando si tratta di ragionare su interazioni dell'utente, debbugare, prestazioni/performance 
+ed evitare le race condiction in generele. 
+
+Devi mettere ogni pezzo dello stato nello store? (foto 2_cosa_non_dovrebbe_andare _nello_store) 
+No, non devi. Cosa non dovrebbe andare nello store : 
+1) Stato non condivso legato ad un unico componente che non ha bisogno di essere condiviso 
+o essere disponibile attraverso le routes(rotte). 
+2) I form angular anche non appartengono allo store, come loro sono spesso auto-contenuti, e non hanno bisogno di essere
+codinvisi attraverso componenti multipli. 
+3) I form non sono serializzabili o immutabili e cambiare, significa che tu non potrai tracciare questi cambiamenti con azioni.
+che eè il secondo principio di Redux, quello che cambia lo stato, tu hai bisogno di dispachets action(inviare azioni).
+4)  Lo stato ha questo ciclo su di esso o ha complesse strutture dati che non possono essere serializzati e non 
+possono essere messi nello store. Per esempio l'intero stato del router non dovrebbe essere nello store perche non è serializzabile.
+
+
