@@ -1,0 +1,22 @@
+Ogni applicazione angualr deve maneggiare lo stato.
+Man mano che l'applicazione diventa grande, devono essere gestiti più stati.
+Continuare a tracciare lo stato può essere una sfida, specialemte se più componenti devono reagire al cambio di stato.
+Noi spesso finiamo con interazioni fragili e difficile trovare bug, rendendo difficoltoso aggiungere nuove feature o piu stati.
+Usando un pattern consistente, noi diamo alla nostra applicazione una solida fondazione e stabile sono spesso gestori di stato complessi.
+Cosa è lo stato in questo contesto ? 
+Le informazioni della view, ad esempio per visualizzare campi specifici o elementi di UI.
+Esse possono essere informazioni utente, come lo username e il ruolo che l'appliacazione ha assegnato a quell'utente.
+Gli stati possono essere dati dell'entità, come l'informazioni di un prodotto che sono mostrati e manipolati dall'applicazione, 
+ma originariamente recuperati e salvati dal back-end. 
+Esso può ussere una selezione dell'utente e un input come la selezione corrente del prodotto selezionato o il filtro inserito o 
+qualunque altra informazione o dati che la nostra applicazione deve tracciare.
+La proposta di NgRx è di provvedere un pattern formale di organizzazione lo stato della nostra applicazione in un singolo container,
+gestendo lo stato dichiedendo  un one-way data flow (flusso di dati unidirezionali), e comunicare i cambiamenti di stato ai nostri 
+componenti, cosi che loro possono reagire di conseguenza.
+
+RxJs fornisce un patter per:
+- organizzazione degli stati 
+- gestione degli stati 
+- comunicazione dei cambiamenti di stati
+
+

@@ -1,0 +1,35 @@
+Ngrx è un framework per costruire applicazioni reattive in angular. 
+NgrX fornisce un gestore di stato, isolato da effetti collaterali, gestori di raccolta di entità, 
+bind del router, gennerazione di codice, e strumenti di sviluppo che migliorano l'esperienza dello svilupattore 
+quando costruiamo molti tipi differneti di applicazioni. 
+
+Ngrx e il piu popolare pattern nella gestione di stati  chiamato redux, assegnato ad angular 
+usando gli standard e le tecniche di angular.
+
+redux patter per capire meglio il funzionamento di ngrx.
+il redux pattern ci aiuta a gestire lo stato della nostra applicazione fornendo one-way data flow(flusso dati unidirezionale),
+attraverso l'applicazione
+
+ad esempio se abbiamo un componente angular con dentro una checkbox, e l'utente la seleziona e poi 
+cambia pagina, quando ritornera su di essa, la pagina non avra piu la checkbox attiva. 
+Nel redux pattern la view genera un evento e il componenete create un azione che rappresenta quell'evento.
+Il componente invia questa azione a una funzione di invio chiamata reducer. 
+il reducer usa l'azione e il corrente stato dell'aplicazione proveniente da NgRx Store(negozio/deposito), 
+che definisce un nuovo stato e aggiona lo store con quelo stato. 
+Questo store e singolo, in memoria dentro un conteiner lato client.
+Esso solo deposita lo stato della nostra applicazione durante l'esecuzione dell'applicazione. 
+Usando questo pattern il nostro stato è immutabile, questo significa che non sarà mai modificato, il reducer 
+creerà un nuovo stato proveniente dallo stato esistente e definira un azione, creando cambiamenti di stato molto piu espliciti. 
+Ogni componente si sottoscrive allo store usando un selettore e vengono avvisati di specifici cambiamenti di stato. 
+Pensa al selettore come una store procedure per lo store della nostra applicazione. 
+Esso sa dove e posizionato e ritrna i dati provenienti dallo store.
+Quando un nuovo stato e sostituito il componente è aggiornato con il nuovo stato e legato con i valori della view che vengono aggiornati.
+In questo caso, la view mostra i codice del prodotto. 
+Se l'utente naviga sulla pagina e poi la cambia, quando ritornerà il componente andra a rieffettuare la sottoscrizione, e 
+otterremo immediatamente lo stato dallo store e la view viene aggiornata con il valore mantenuto dall'utente. 
+Con NgRx qualsiasi bit di stato che abbiamo oltre la vita di un componente o fornito da altri componenti, 
+noi inviaremo un azione di aggiungere i dati al nostro store, cosi noi possiamo gestirlo meglio.
+I nostri componenti si sottoscrivono attraverso un selettore per guardare un qulunque cambiamento di dati salvati.
+
+Il 1 way data flow, e definito da i seguenti passaggi: 
+View -> componente -> invio azione -> reducer -> recupero vecchio stato e generazione del nuovo -> selettore -> invio stato al componente . 
