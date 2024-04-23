@@ -1,7 +1,14 @@
 Tutti gli eventi untente rilevanti invianoun azione.
 Colpendo i reducer che aggiornano lo store.
 Qualche esempio di azioni che potrebbero inviare per cambiare lo store sono, 
-un azione di login dopo che un form di login è stato mandato.
+un azione di login dopo che un form di login è stato mandato(foto 3_Action_example). 
 Un azione di un menu laterale di commutazuine dopo il click di un bottone.
+azione di recupero dei dati quando inzializzo il nostor componente, e inizio un azione di spinner globale 
+quando salvo i dati.
+Le azioni sono eventi che hanno un tipo e una propieta descrittiva dell'azione e posso avere dati opzionali associati con loro.
+Lo stato è di sola lettura e cambia quando noi inviamo un altre azioni, significa che non dovresti mutare los stato e dovresti seguire
+il principio dell'immutabilità, significa che se hai il bisongo di cambiare lo stato dello store quando sostituisci l'intero oggetto stato 
+e non appena cambia una parte di esso.
 
-fermo a 00:19 da Actions 
+immutabilità può portare un aumento delle prestazioni della tua app a portare a semplicita di programmazione e debug.
+Se un dato non cambia mai, si deve ragionare sui dati che è libero di cambiare arbitrariamente attraverso l'app.

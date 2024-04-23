@@ -3,7 +3,7 @@ NgrX fornisce un gestore di stato, isolato da effetti collaterali, gestori di ra
 bind del router, gennerazione di codice, e strumenti di sviluppo che migliorano l'esperienza dello svilupattore 
 quando costruiamo molti tipi differneti di applicazioni. 
 
-Ngrx e il piu popolare pattern nella gestione di stati  chiamato redux, assegnato ad angular 
+Ngrx e il piu popolare pattern nella gestione di stati chiamato redux, assegnato ad angular 
 usando gli standard e le tecniche di angular.
 
 redux patter per capire meglio il funzionamento di ngrx.
@@ -22,7 +22,7 @@ Usando questo pattern il nostro stato è immutabile, questo significa che non sa
 creerà un nuovo stato proveniente dallo stato esistente e definira un azione, creando cambiamenti di stato molto piu espliciti. 
 Ogni componente si sottoscrive allo store usando un selettore e vengono avvisati di specifici cambiamenti di stato. 
 Pensa al selettore come una store procedure per lo store della nostra applicazione. 
-Esso sa dove e posizionato e ritrna i dati provenienti dallo store.
+Esso sa dove e posizionato e ritorna i dati provenienti dallo store.
 Quando un nuovo stato e sostituito il componente è aggiornato con il nuovo stato e legato con i valori della view che vengono aggiornati.
 In questo caso, la view mostra i codice del prodotto. 
 Se l'utente naviga sulla pagina e poi la cambia, quando ritornerà il componente andra a rieffettuare la sottoscrizione, e 

@@ -1,11 +1,11 @@
-Perche usare ngrx?
+Perchè usare ngrx?
 Senza NgRx, noi costruiamo la nostra applicazione, noi probabilemte useremo un service per definire qualche stato 
 che conserviamo per le nostre pagine del prodotto.
-Come noi aggiungiamo nuove feature alla nostra applciazione, noi creiamo piu serivce con scopi simili col tempo.  
+Come noi aggiungiamo nuove feature alla nostra applciazione, noi creiamo piu service con scopi simili col tempo.  
 Noi potremmo trovare noi stessi con una dozzina di questi piccoli servizi.
 Con Ngrx, noi non abbiamo bisogno di servizi per ogni bit di stato.
 Invece, noi abbiamoo un singolo store per lo stato della nostra applicazione, rendendo facile trovare, traccaire e recuperare i valori
-dello state.
+dello stato.
 Noi potremmo avere un servizio di accesso ai dati,(foto 3_service_esempio).
 
 Il compoentne non accede direttamente ai dati ma si sottoscrive allo store.
@@ -17,10 +17,10 @@ Usa NgRx quando:
 1) Usa NgRx quando ci sono un paio di stati e piccoli servizi. Lo store provede un posto conveniente per mettere UI per 
 mantenere esso tra le view del router
 2) Usa NgRx quando ci sono eccessive richieste HTTP.  Lo store fornisce una chache lato cliente per la nostra applicazione che 
-può usare al bisogno. U
+può usare al bisogno.
 3) Usa NgRx quando  ci sono componenti di interezione complessi. Il reducer aggiorna lo store avvisa tutti i sottoscritti mantiene 
 i componenti disaccoppiati, ma comunicano.
-4) Usa NgRx in questo scenario previene le reca condiction(corsa di accesso a un file) e le problematiche causate quando
+4) Usa NgRx in questo scenario previene le race condiction(corsa di accesso a un file) e le problematiche causate quando
 componenti multipli aggiornano i dati
 5) Usa NgRx e qualocsa non funziona, esso è un grande tool per aiutarci a vedere le azioni sullo state, usando NgRx da a 
 noi lo standard patter, questo puo aiutare progeti grandi o complessi e grandi team con questi problemi.

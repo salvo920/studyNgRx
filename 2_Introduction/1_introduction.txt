@@ -8,7 +8,7 @@ Le informazioni della view, ad esempio per visualizzare campi specifici o elemen
 Esse possono essere informazioni utente, come lo username e il ruolo che l'appliacazione ha assegnato a quell'utente.
 Gli stati possono essere dati dell'entità, come l'informazioni di un prodotto che sono mostrati e manipolati dall'applicazione, 
 ma originariamente recuperati e salvati dal back-end. 
-Esso può ussere una selezione dell'utente e un input come la selezione corrente del prodotto selezionato o il filtro inserito o 
+Esso può essere una selezione dell'utente e un input come la selezione corrente del prodotto selezionato o il filtro inserito o 
 qualunque altra informazione o dati che la nostra applicazione deve tracciare.
 La proposta di NgRx è di provvedere un pattern formale di organizzazione lo stato della nostra applicazione in un singolo container,
 gestendo lo stato dichiedendo  un one-way data flow (flusso di dati unidirezionali), e comunicare i cambiamenti di stato ai nostri 
