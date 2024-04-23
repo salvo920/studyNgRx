@@ -1,0 +1,19 @@
+Perche prendere tempo per imparare NgRx e cosa implemneta il patter redux?
+1) Avere un albero di stato immutabile e centralizzato rende i cambiamenti piu espliciti e prevedibili con un tratto ripetibile
+di cambiamenti di stati, rendendo semplice rintraccaire i problemi. 
+Usando funzioni pure per cambiare los tato ci consente funzilanita in Redux, come viaggio nel tempo debug, registra/riproduci, e ricaricamento a caldo.
+Esso anche rende facile idratare lo stato della tua applicazione proveniente dal local storage o quando fai un render lato server.
+Redux rende esso, facile da implementare il rilevamento dei cambiamenti su Angular nel tuo componente chiamato OnpUsh, che può migliarere le 
+prestazioni della view. 
+Redux rende scrivere unitest facile, come tutti i cambiamenti di stati vanno attraverso le funzioni pure, che sono piu semplici da testare 
+2) L'attrezzatura è un atro grande beneficio di usare il pattern redux, come redux rende possibile avere un cronologia dei cambiamenti dello stato 
+Questo rende faciloe visualizzare il tuo albero dello stato, eseguire il debug annullando o rifacendo il cambiamento di stato, mentre anche
+otteniamo login avanzate.
+Questo è un enorme cambiamento di come noi normalemente debugghiamo un applciazione angular e molti sviluppatori sono sorpresi di 
+quanto meno tradizione è il debug  che loro fanno, come log in console e impostare i breakpoint. 
+Un altro benedit di Redux is semplificare la comunicazione dei componenti. 
+NgRx rende esso facile per accedere allo stato condiviso tramite l'inject dello store nel componente vs(versus) passare dati tra componenti.  
+Redux non  è grande per fare cose semplici e veloce. 
+é grande per rendere cose molto complesse semplici. 
+
+fermo a 1:32 al video 

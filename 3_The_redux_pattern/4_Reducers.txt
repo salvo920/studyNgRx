@@ -1,0 +1,24 @@
+I reducer sono funzioni che cambiano lo stato in risposta di un azione: 
+1) Qualche esempio di cambiamenti di stato che potrebbero avvenire in un reducer. 
+2) Impostare una propietà nello stato duserDetails sul login, altenare la propieta sideMenuVisible a 
+true al click su un bottone.
+3) Impostare con successo il recupero di dato su un compoennte inizializzato o impostare la propieta 
+globalSpinnerVisible a true mentre salviamo i dati.
+4) Non tutte azioni inviate possono direttamente aggionare lo store tramite il reducer, alcune azioni hanno effetti collaterali.
+Per gestire gli effetti, noi usiamo la libreira NgRx Effects. 
+
+I reducer sono responsabili per la gestione della transizione da uno stato al prossimo stato nella tua applicazione.
+Le funzioni reducer gestiscono queste transizioni da determinado quali azioni da gestire basato sul tipo di azioni.
+
+I reducers sono funzione pure che gestiscono ogni stato di transizione sincrona.
+Ogni funzione reducer prende lo stato inizializzato e una selezione della funzione  che gestice il cambiamento di stato 
+per le loro azioni associate. 
+Queste funzioni prendono lo stato corrente e le azioni ritornano un nuovo stato. 
+
+Cosa è una funzione pura? 
+Una funzione pura è una funziona che dando gli stessi argomenti, ritorneranno sempre gli stessi valori senza eddetti collaterali. 
+per esemio la funzione di somma foto 4_pure_and_impure_function ritornerà sempre lo stesso risultato usando gli stessi parametri.
+Le funzioni pure non mutano o accedono a propietà fuori dal propio scope di funzione 
+
+
+
