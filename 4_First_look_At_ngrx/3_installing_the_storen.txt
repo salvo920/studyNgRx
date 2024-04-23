@@ -1,0 +1,17 @@
+Per installare NgRx nel tuo progetto: 
+NgRx è compreso  di una serie di pacchetti, il pacchetto richiesto per adesso è solo lo store. 
+NgRx store fornisce un container in memoria per lo stato della nsotra applicazione.
+Questo sotre provede una singola fonte di verità per la nostra applicazione.
+Esso è l'unico posto dove noi salviamo lo stato della nostra applciazione e l'unico posto per leggere lo stato.
+Questo garantisce che ogni componente ha accesso allo stato ha un risultato coerente.
+Lo store è solo in run-time(esecuzione), cosi lo stato non è mantenuto se l'utente aggiorna la pagina o dopo che l'utente 
+esce dall'applicazione.
+Pensa dello store come un container con un semplice oggetto javascript, tenendo lo stato dell'applicazione.
+Ogni bit dello stato è definito con una propietà. 
+Nel nostro esempio la propieta include il flag(bandiera) showProductCode, l'elemento corrente selezionato e i prodotti.
+Tutti usati dalla pagine caratteristiche del prodotto(foto 3_esempio_store). 
+
+Come noi abbiamo aggiunto piu caratteristiche alla nostra applciazione, la quantita di stai mantenuti nel nostro store 
+cresce. 
+
+fermo a 1:13, 
