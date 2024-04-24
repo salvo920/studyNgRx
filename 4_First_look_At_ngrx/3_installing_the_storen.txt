@@ -12,6 +12,29 @@ Nel nostro esempio la propieta include il flag(bandiera) showProductCode, l'elem
 Tutti usati dalla pagine caratteristiche del prodotto(foto 3_esempio_store). 
 
 Come noi abbiamo aggiunto piu caratteristiche alla nostra applciazione, la quantita di stai mantenuti nel nostro store 
-cresce. 
+cresce, puo diventare sgretolato da gestire e difficile dire quale stato non va quale caratteristica. 
+Quale pagina è quest allowEdit flag ? 
+Lo stato è piu semplice da gestire se è organizzato in struttura logica.
+Perche le applicazioni angular sono spesso organizzate in module feature(caretteristici), 
+rendendo sensato il layout dello stato per una caratteristica(nome del componente).
+Questo andra a creare un gerarchia ad albero di propieta (foto 3_example_tree_hierarchy_state).
 
-fermo a 1:13, 
+Qui noi abbiamo definito lo stato root, ad esempio per nascondo la pagina di benvenuto.
+Poi abbiamo lo stato associato alle feature dei prodotti.
+Poi a seguire lo stato delle feature dell'utente e del cliente, una per ogni modulo feature(caratteristico).
+Lo stato di ogni feature è stato aggiunto allo stato dell'applciazione quando la feature è caricata, 
+il risultato è un singolo albero nello stato. 
+Questi pezzi di stato sono qualche volta chiamati slices(fette),
+ad esempio abbiamo la fetta dei prodotti delgi utentu e dei clineti.
+Pensa allo store come qualocsa come un database in memoria, non metteresti mai tutti gli elementi in un unica tabella 
+ma li organizzi in modo da accedere facilemnte ai valori di cui hai bisogno.
+Ci sono un paio di modi per installare lo store dalla documentazione (link https://ngrx.io/guide/store/install),
+il vantaggio di installare lo store con l'angualr cli, consiste nell'aggiunta dell'import store nel root dell'applciazione.
+
+Il comando per installare Ngrx da angualr cli : ng add @ngrx/store@latest 
+se ottieni un errore usa tolgli il @latest
+
+
+
+
+fermo a 1:38, 

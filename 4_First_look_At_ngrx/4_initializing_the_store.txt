@@ -1,0 +1,35 @@
+Quando impostiamo NgRx store nella nostra applicazione noi inizializziamo lo store con un reducer. 
+Richiama quel reducer compie un azione e lo stato esistente, crea un nuovo stato e aggiorna lo store con un nuovo stato.
+Rende sensato associare lo state con un reducer, perche va a creare lo stato. 
+Il codice per inizializzare lo store è simile a questo (foto 4_example_code_init_state_reducer) nel root app modulo,
+noi usiamo l'importazione dello StoreModule dalla libreria @ngrx/store, che abbiamo installato. 
+Poi aggiungiamo lo StoreModule all'array di import, e poi il forRott metodo passando come refernce il reducer.
+Questa inizializzare associa il reducer con lo store e registra il container dello stato dell'applicazione.
+Con NgRx abbiamo un unico store per tutti gli stati, cosi possiamo usare un singolo reducer per lavorare con lo stato 
+Noi non vogliamo un grande, piatto e massiccio stato. 
+Noi non vogliamo nemmeno un enorme reducer per gestire tutti gli stati.
+Piuttosto, noi organizziamo il nostro stato dalla feature(caratteristica) per abbinare con il nostro modulo feature(caratteristico).
+Per creare questo stato, noi andiamo a definire multipli reducer, uno per ogni fetta di feature dello stato. 
+Ogni reducer è quindi più piccolo o più focus(concentraot/focalizzato) e quindi più facile da costruire, mantenere e testare.
+In aggiunta, lo stato non viene creato per un modulo non caricato. E la combinazione dei reducer che rappresentano lo stato 
+dell'applicazione in qualsiasi momento.
+Per raggiungere questo tipo di organizzazione (foto 4_organizzazione_reducer_state) noi adotteremo una tecnica chiamata 
+feature module state composition (composizione dello stato del modulo), questo ci consente di comporre lo stato della nostra 
+applicazione, questo suona più difficile di quello che è, per usare il feature module state composition noi dobbiamo iniziare inizializzando 
+lo stato dalla root della nostra applicazione, nel root app.module, come abbiamo visto prima creando lo store e passando il reducer, 
+Questo puo includere un valore come hideWelcomepage flag. 
+Noi Piuttosto inizialiamo ogni stato delle feature usando il metodo StoreModule.forFeature().
+Il metodo forFeature() prende il nome della fetta dello store(slices) che è spesso usato nella forma plurale della nostra feature(caratteristica). 
+Il secondo argomento è il riferiemnto al reducer che gestisce quella feature nella fetta di stato.
+Noi andremo a ripetere il codice StoreModule.forFeature(), per ogni modulo feature che utilizziamo nello store.
+Nota come sono simili questi metodi usati dal router, noi abbiamo il RouterModule.forRoot() che definisce le rotte root
+e abbiamo il RouterModule.forChild che definisce le rotte dei moduli feature. 
+Attraverso questo forFeature è una scelta di nome migliore. 
+Noi possiamo abbattere ulteriolemnte( creare prodità nell'oggetto) lo stato e costruire multipli reducer per una fetta dello store per feature. 
+In questo esempio abbiamo diviso le fette del prodotto in 2 sotto fette, una per la pagina impostazioni productLists, gli altri per i productData
+e noi possiamo definire un reducer per ogni sotto fetta(sub slice) dello stato.
+Questi reducer sono aggregati per il loro valoro associato (foto 4_reducer_aggregade_for_associated_value),Questo specialemnte quando una 
+singola feature ha un paio di stati ha un paio di stati ce consente di rompere i reducer in pezzi piu piccoli.
+Quando inizialiamo lo store per questo scenario 
+
+fermo a 3:33 
