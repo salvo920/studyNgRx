@@ -30,6 +30,11 @@ In questo esempio abbiamo diviso le fette del prodotto in 2 sotto fette, una per
 e noi possiamo definire un reducer per ogni sotto fetta(sub slice) dello stato.
 Questi reducer sono aggregati per il loro valoro associato (foto 4_reducer_aggregade_for_associated_value),Questo specialemnte quando una 
 singola feature ha un paio di stati ha un paio di stati ce consente di rompere i reducer in pezzi piu piccoli.
-Quando inizialiamo lo store per questo scenario 
 
-fermo a 3:33 
+Quando inizialiamo lo store per questo scenario, come argomento: 
+1) nome del metodo forFeature.
+2) noi passiamo nel set del reducer un oggetto con coppia chiave => valore.
+la chiave è il nome di ogni sub-slice dello state, e il valore è il riferiemnto  del reducer associato. 
+
+
+
