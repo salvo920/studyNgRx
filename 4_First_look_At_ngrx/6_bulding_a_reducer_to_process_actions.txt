@@ -1,0 +1,37 @@
+Il metodo StoreModule.forRoot()  è all'interno dell'import nell'elemento root , in app.component 
+gli venogno passati 2 valori oggetti vuoti come parametri.
+Possiamo passare degli oggetti vuoti senza dover configurare nulla, quando lo instanziamo dal root, perche sono opzionali.
+Ogni altro modulo feature deve averli. 
+Un reducer è specificato con un export constant, definire una funzione usando createReducer( foto 6_).
+Noi spesso creiamo un reducer per ogni feature slice dello stato, cosi usiamo il nome costante con il nome della feature.
+La funzione createReducer prende uno stato inziale che definisce il valore inziale dell slice dello stato product .
+la finalita della funzione reducer è di ascoltare per azioni, e per altre azioni gestisce la transizione proveniente dallo 
+stato corrente al nuovo stato in modo immutabile.
+Noi identifichiamo queste azioni e il lore gestore utilizzando uno o piu funzioni on.
+Le funzioni on, prende un azione e un funzione per gestire l'azione, la funzione gestore prendere lo stato corrente, 
+lo processa e ritorna un nuovo stato. 
+In questo esempio, noi ascoltiamo per il toggleProductCode action, Quando L'azione è inviata lo stato attuale passato 
+nella funzione gestore è eseguita e noi ritorniamo un nuovo stato. 
+Una cosa importante sulla nota, un reducer dovrebbe essere una funzione pura.
+Vale a dire con lo stesso input la funzione restituisce sempre lo stesso output, senza effetti collaterali deve essere sincrona.
+Il return è sempre un oggetto che definisce il nostro nuovo stato. Per creare il nuovo stato, noi inziamo con una copia dello stato 
+che abbiamo passato, che è fatto dal codice ... state , usando lo spread operator, questa è una copia shallow(superfiale)
+non copiera gli oggetti annidati per reference.
+Poi abbiamo specificato lo stato da modificare basato sull'azione inviata. Se questa specifico bit di stato già esiste,
+Esso cambiera il valore della propieta in una copia, se lo la propietà non esiste verra aggiunta. Ad esempio :
+{
+	... state,
+	showProductCode : state.showProductCode 
+}
+
+showProductCode è la nuova propieta, ritornera questo nuov stato e sostituirà lo stato originale dello store (foto 6_example_store_action),
+Se scegliamo di usare due azioni per il nostro scenario, i nostri reducer dovrebbero avere 
+2 funzioni on per impostare un nuovo stato a true, e l'altro che impsota il nuovo stato a false. 
+Man mano che aggiungiamo nuove azioni per il nostro feature del prodotto, noi aggiungiamo piu funzioni on qui. 
+
+Possiamo anche specificare azioni multiple che impostano lo stesso stato.
+Questo minimizza la qunatità di ripetizioni nel codice nel nostro reducer
+
+
+
+

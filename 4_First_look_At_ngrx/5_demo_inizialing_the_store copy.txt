@@ -1,0 +1,4 @@
+Il metodo StoreModule.forRoot()  è all'interno dell'import nell'elemento root , in app.component 
+gli venogno passati 2 valori oggetti vuoti come parametri.
+Possiamo passare degli oggetti vuoti senza dover configurare nulla, quando lo instanziamo dal root, perche sono opzionali.
+ogni altro modulo feature deve averli. 
