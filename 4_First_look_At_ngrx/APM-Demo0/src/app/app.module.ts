@@ -17,23 +17,30 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
 /* Feature Modules */
 import { UserModule } from './user/user.module';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(ProductData),
-    UserModule,
-    AppRoutingModule,
-    StoreModule.forRoot({}, {})
-  ],
-  declarations: [
-    AppComponent,
-    ShellComponent,
-    MenuComponent,
-    WelcomeComponent,
-    PageNotFoundComponent
-  ],
-  bootstrap: [AppComponent]
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		HttpClientInMemoryWebApiModule.forRoot(ProductData),
+		UserModule,
+		AppRoutingModule,
+		StoreModule.forRoot({}, {}),
+		StoreDevtoolsModule.instrument({
+			name: 'APM Demo app Devtools',
+			maxAge: 25,
+			logOnly: environment.production
+		})
+	],
+	declarations: [
+		AppComponent,
+		ShellComponent,
+		MenuComponent,
+		WelcomeComponent,
+		PageNotFoundComponent
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

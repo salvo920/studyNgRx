@@ -1,0 +1,23 @@
+Benefici dei selettori
+
+1. Forniscono un Api fortemente tipizzate: non dobbiamo fare riferimento a fette dello stato hard-codati
+2. Disaccoppiano lo stato dai componenti: cosi i componenti non devono conosce la struttara dello store
+3. incapsula transformazioni dati complesse: rendendo piu semplice per i componenti ottenere dati complessi.
+4. riusabilità: lo stesso componente che accedere allo stesso bit dello stato, nello stesso modo
+5. morizzati(cache): il valore ritornato da un seletttore è memorizzato nella cache e non sarà rivalutato a meno
+che lo stato non cambi, questo può migliora le performance.
+Cosa è un selector?
+Un selector è una funzione che scava nello stato e ritorna una slice specifico dello stato.
+Ci sono 2 tipi base di funzioni di selettori forniti dalla libreria ngrx:
+1) createFeatureSelector: Questa funzione ci consente di ottenere lo slice dello stato feature(carratterstico), 
+specificando il nome della feature, con un tipo forte al valore ritornato usando il generics 
+2) createSelector: questa funzione ci consente di ottenere un bit dello stato, componendo il selettore per 
+navigare giu nell'albero dello stato. 
+Qui passiamo come argomento del createSelector(foto 5_create_selectors_2_methods_example):
+1) il getProductFuatureState.
+2) lo stato: ritanto dagli argomenti precedenti, che in questo caso is lo slice product. 
+
+Un buon posto per mettere il propio selettore è dentro il reducer (Esempio foto 5_codice_esempio_selettore).
+I selettori andrebbero messi in un file seprato secondo le best practics.
+
+

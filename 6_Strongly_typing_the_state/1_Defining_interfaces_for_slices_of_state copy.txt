@@ -1,0 +1,9 @@
+ogni slice del nostro stato deve essere tipizzato. 
+Ogni slice deve avere il propio tipo. 
+
+Dove abbiamo un interfaccia che devinisce lo stato che farà riferimento al tipo ad ogni slice(ESempio foto 1_state_and_slice), andando 
+cosi a definire tutto l'albero dello stato. 
+
+I reducer rendono senso se definisco le caratterstiche dello stato per questo dobbiamo definire le interfacce dello stato associati li(singole interface).
+L'interfaccia root dello stato invece va crata una nuova cartella stateZapp.state.ts, li dentro trovero il root dello state definito, 
+la cartella state va creata allo stesso livello dei componenti.

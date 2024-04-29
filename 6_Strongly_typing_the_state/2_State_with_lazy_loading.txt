@@ -1,0 +1,2 @@
+lazy loading dello stato. 
+Per caricare lo stato in lazy-loading, devi estendere all'interfaccia State> AppState.State (foto 2_lazy_loading_state).

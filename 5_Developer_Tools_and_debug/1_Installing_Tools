@@ -1,0 +1,3 @@
+per debbugare @ngrx ci sono 2 passaggi:
+1) aggiungi a chrome l'estenzione redux DevTool.
+2) aggiungi nel progetto angualr il dev-tool, tramite il comando:  ng add @ngrx/store-devtools .
