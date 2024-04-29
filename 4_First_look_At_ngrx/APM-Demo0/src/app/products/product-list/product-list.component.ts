@@ -58,4 +58,16 @@ export class ProductListComponent implements OnInit, OnDestroy {
 		this.store.dispatch(setCurrentProduct({ product }))
 	}
 
+	loadData(product: Product): void {
+		// this.store.dispatch(setCurrentProduct({ product }))
+	}
+
+	loadDataSuccess(product: Product): void {
+		// this.store.dispatch(setCurrentProduct({ product }))
+	}
+
+	loadDataFail(product: Product): void {
+		// this.store.dispatch(setCurrentProduct({ product }))
+	}
+
 }
