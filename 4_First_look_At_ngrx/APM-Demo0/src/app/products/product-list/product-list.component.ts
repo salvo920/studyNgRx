@@ -1,11 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-
 import { Subscription } from 'rxjs';
-
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 import { Store } from '@ngrx/store';
-import { State, getShowProductCode } from '../state/product.reducer';
+import { State, getShowProductCode, getcurrentProduct } from '../state/product.reducer';
+import { initCurrrentProduct, setCurrentProduct, toggleProductCode } from '../state/product.action';
 
 @Component({
 	selector: 'pm-product-list',
@@ -27,7 +26,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 	constructor(private store: Store<State>, private productService: ProductService) { }
 
 	ngOnInit(): void {
-		this.sub = this.productService.selectedProductChanges$.subscribe(
+		this.store.select(getcurrentProduct).subscribe(
 			currentProduct => this.selectedProduct = currentProduct
 		);
 
@@ -48,15 +47,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
 	}
 
 	checkChanged(): void {
-		this.store.dispatch({ type: '[Product] Toggle Product Code' })
+		this.store.dispatch(toggleProductCode())
 	}
 
 	newProduct(): void {
-		this.productService.changeSelectedProduct(this.productService.newProduct());
+		this.store.dispatch(initCurrrentProduct())
 	}
 
 	productSelected(product: Product): void {
-		this.productService.changeSelectedProduct(product);
+		this.store.dispatch(setCurrentProduct({ product }))
 	}
 
 }

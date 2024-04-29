@@ -1,1 +1,8 @@
 fermo a 00:00 
+ogni createAction deve avere al suo interno: 
+1) la slice dello stato utilizzato 
+2) l'azione che esegue 
+3) usanre una buona name convection ci da la possibilità quando in debug di capire cosa succede, 
+maglio se include anche il nome della pagina o del componente o API che invia l'azione 
+
+anche le azioni devono essere organizzate nel propio file. 
